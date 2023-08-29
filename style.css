@@ -1,0 +1,259 @@
+
+/* Site Stylesheet
+  1. Global Styles
+  2. Typography Styles
+  3. Structure Styles
+  4. Module Styles
+  5. Component Styles
+  6. Page Styles
+======================================== */
+
+
+:root {
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+/* 1. Global Styles
+======================================== */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+body {
+    background-color: var(--charcoal-grey);
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--dark-slate-grey);
+}
+*/
+
+body {
+    /* Center */
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--charcoal-grey);
+    color: var(--dark-slate-grey);
+}
+
+
+h1 {
+    font-size: xxx-large;
+    line-height: 50px;
+    margin-bottom: 0%;
+}
+
+p {
+    padding: 0 3%;
+}
+
+li { 
+    list-style-type: none; 
+    position: relative;
+    top: 10px;
+} 
+
+#container-right img {
+    width: 100%;
+}
+
+textarea {
+    padding-left: 5%;
+    font-size: 15px;
+    border-radius: 10px;
+    border: solid 1px hsl(231, 7%, 90%);
+    color: grey;
+    padding: 4% 4% 4% 6%;
+    resize: none;
+}
+
+button {
+    margin-top: 5%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    width: 100%;
+    padding: 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[id="email"] {
+    padding-left: 5%;
+    font-size: 15px;
+    border-radius: 10px;
+    border: solid 1px hsl(231, 7%, 90%);
+    color: grey;
+    padding: 4% 4% 4% 6%;
+    resize: none;
+    width: 90%;
+    cursor: pointer;
+}
+
+input[id="email"]:active {
+    border: solid 1px black;
+}
+
+.mobile {
+    display: none;
+}
+
+input:focus-visible {
+    outline: 1px solid black;
+    color: black;
+}
+
+button:hover {
+    background: linear-gradient(-90deg, rgba(255,118,73,1) 50%, rgba(255,91,128,1) 98%);
+    box-shadow: 10px 10px 30px rgba(255, 0, 0, 0.397);;
+}
+
+/* 2. Typography Styles
+======================================== */
+
+/* 3. Structure Styles
+======================================== */
+
+#main-container {
+    background-color: var(--white);
+
+    /* Center horizontally */
+    margin: auto;
+	
+	/* Center vertically */
+
+	
+	/* Align text */
+    text-align: left;
+
+    border-radius: 20px;
+    display: inline-flex;
+}
+
+#main-container-suc {
+    background-color: var(--white);
+
+    /* Center horizontally */
+    margin: auto;
+	
+	/* Center vertically */
+
+	
+	/* Align text */
+    text-align: left;
+
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    padding: 3% 5% 3% 5%;
+    font-size: 14px;
+}
+
+#main-container-suc img{
+    width: 20%;
+}
+
+#main-container-suc span{
+    font-weight: bold;
+}
+
+#container-left{
+    width: clamp(90%, 50%, 50%);
+    padding: 5%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3%;
+}
+
+#container-right {
+    /*width: 50%;*/
+    width: clamp(100%, 50%, 50%);
+    padding: 2%;
+}
+
+ul {
+    margin-block-start: 0em !important;
+    margin-inline-start: 0em;
+    padding-inline-start: 0.5em;
+}
+
+.list-container {
+    display: inline-flex;
+    gap: 15px;
+}
+
+#flex-form {
+    display: inline-flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+ }
+
+ #invalid {
+    display: none;
+    color: red;
+ }
+
+
+/* 4. Modules Styles
+======================================== */
+
+/* Site Navigation */
+
+/* Site Footer */
+
+/* 5. Component Styles
+======================================== */
+
+/* 6. Page Styles
+======================================== */
+
+
+@media only screen and (max-width: 800px) {
+    #main-container {
+      flex-direction: column-reverse;
+    }
+
+    #container-right {
+        padding: 0%;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    #main-container-suc {
+        width: 90%;
+        margin-top: 30%;
+    }
+
+    #main-container-suc button{
+        margin-top: 40%;
+    }
+
+    body {
+        background-color: var(--white);
+    }
+
+
+  }
